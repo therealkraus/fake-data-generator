@@ -59,6 +59,7 @@ def generate_fake_person_data(localization: str = "en_CA", n: int = 1000):
     data = {
         "first_name": [_dirtify(fake.first_name, 0.1) for _ in range(n)],
         "last_name": [_dirtify(fake.last_name, 0.1) for _ in range(n)],
+        "date_of_birth": [_dirtify(fake.date_of_birth) for _ in range(n)],
         "street_address": [_dirtify(fake.street_address) for _ in range(n)],
         "city": [_dirtify(fake.city) for _ in range(n)],
         "province": [_dirtify(fake.province_abbr) for _ in range(n)],
